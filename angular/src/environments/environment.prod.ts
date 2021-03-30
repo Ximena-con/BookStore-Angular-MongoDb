@@ -1,0 +1,25 @@
+import { Environment } from '@abp/ng.core';
+
+const baseUrl = 'http://localhost:4201';
+
+export const environment = {
+  production: true,
+  application: {
+    baseUrl,
+    name: 'BookStore123',
+    logoUrl: '',
+  },
+  oAuthConfig: {
+    issuer: 'https://localhost:44308',
+    redirectUri: baseUrl,
+    clientId: 'BookStore_App',
+    responseType: 'code',
+    scope: 'offline_access BookStore',
+  },
+  apis: {
+    default: {
+      url: 'https://localhost:44308',
+      rootNamespace: 'Acme.BookStore',
+    },
+  },
+} as Environment;
